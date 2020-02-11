@@ -1,0 +1,52 @@
+{
+    "name": "codelayer/laravel-student-validator",
+    "description": "Validate educational email addresses for student status verification.",
+    "keywords": [
+        "laravel",
+        "student",
+        "education",
+        "edu",
+        "validation"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tobias Dierich",
+            "email": "tobias@codelayer.de",
+            "homepage": "https://codelayer.de",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.2",
+        "ext-json": "*",
+        "illuminate/support": "^5.8|^6.0|^7.0",
+        "egulias/email-validator": "^2.1",
+        "jeremykendall/php-domain-parser": "^5.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codelayer\\StudentValidator\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Codelayer\\StudentValidator\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Codelayer\\StudentValidator\\StudentValidatorServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
