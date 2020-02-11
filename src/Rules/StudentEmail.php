@@ -11,7 +11,7 @@ class StudentEmail implements Rule
      */
     public function passes($attribute, $value)
     {
-        return app('student-validator')->isValid($value);
+        return app('student-validator')->isValidEmail($value);
     }
 
     /**
